@@ -3,9 +3,9 @@ import React from 'react'
 export default function Navbar() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-light mx-4 py-4">
+            <nav className="navbar navbar-expand-lg bg-white py-4 px-4 fixed-top" >
                 <div className="container-fluid">
-                    <a className="navbar-brand fs-2" href="/">Navbar</a>
+                    <a className="navbar-brand fs-2" href="/">FindMyRecepie</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -27,10 +27,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-            <div className='w-50 text-center mx-auto'>
-                <p className=''>"One of the very best things about life is the way we must regularly stop whatever it is we are doing and devote our attention to eating. "</p>
-                <p className='fw-bold'>Luciano Pavarotti</p>
-            </div>
+            
         </>
     )
 }
