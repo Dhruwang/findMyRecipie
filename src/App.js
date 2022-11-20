@@ -12,7 +12,6 @@ function App() {
   const [search, setsearch] = useState("")
     function handleClick() {
         setsearch(inputRef.current.value);
-        console.log(search)
       }
   return (
     <>
