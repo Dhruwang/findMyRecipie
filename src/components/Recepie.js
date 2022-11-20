@@ -4,27 +4,29 @@ import RecepieItem from './RecepieItem'
 
 export default function Recepie(props) {
   const [recipies, setrecipies] = useState([])
+  const [results, setresults] = useState("")
   console.log('rerendering')
 
   const fetchRecipies = async () => {
-    // props.setProgress(10)
+    props.setProgress(10)
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${props.search}`;
     console.log(url)
     // setloading(true)
     let data = await fetch(url)
-    // props.setProgress(30)
+    props.setProgress(30)
     let parsedData = await data.json();
     setrecipies(parsedData.meals)
     // setloading(false)
     // settotalResults(parsedData.totalResults)
-    // props.setProgress(100)
-    console.log(recipies)
+    props.setProgress(100)
+    setresults(props.search)
   }
   useEffect(() => {
     fetchRecipies();
   },[props.search])
   return (
     <div className='container my-4 row mx-auto text-center'>
+      <h2>Showing results for {results}</h2>
       <div className='container text-center'>
         <div className='row'>
 
