@@ -15,22 +15,31 @@ export default function Recepie(props) {
     let data = await fetch(url)
     props.setProgress(30)
     let parsedData = await data.json();
-    setrecipies(parsedData.meals)
+    if (parsedData.meals !== null) {
+      setrecipies(parsedData.meals)
+      setresults(`Shwoing results for ${props.search}`)
+      
+    }
+    else{
+      console.log('check')
+      setrecipies([])
+      setresults("Sorry no results found")
+    }
     // setloading(false)
     // settotalResults(parsedData.totalResults)
     props.setProgress(100)
-    setresults(props.search)
+    
   }
   useEffect(() => {
     fetchRecipies();
   },[props.search])
   return (
     <div className='container my-4 row mx-auto text-center'>
-      <h2>Showing results for {results}</h2>
+      <h2>{results}</h2>
       <div className='container text-center'>
         <div className='row'>
-
-          {recipies.map((element, index) => {
+          {console.log(recipies)}
+          {recipies !== null && recipies.map((element, index) => {
 
             return <div className='col-md-4 py-4' key={index} >
               < RecepieItem key={element.idMeal} title={element.strMeal} imageUrl={element.strMealThumb === null ? 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png' : element.strMealThumb} />
