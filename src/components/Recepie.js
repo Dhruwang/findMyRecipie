@@ -42,7 +42,7 @@ export default function Recepie(props) {
           {recipies !== null && recipies.map((element, index) => {
 
             return <div className='col-md-4 py-4' key={index} >
-              < RecepieItem key={element.idMeal} title={element.strMeal} imageUrl={element.strMealThumb === null ? 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png' : element.strMealThumb} />
+              < RecepieItem key={element.idMeal} setFoodName={props.setFoodName} title={element.strMeal} imageUrl={element.strMealThumb === null ? 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png' : element.strMealThumb} />
             </div>
           })}
 

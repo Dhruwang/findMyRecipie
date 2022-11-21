@@ -14,7 +14,6 @@ function App(props) {
   const inputRef = useRef(null);
   const [search, setsearch] = useState("")
   const [progressvalue, setProgressvalue] = useState(0)
-  const [link, setlink] = useState("")
   const setProgress = (value) => {
     setProgressvalue(value)
   }
@@ -33,7 +32,7 @@ function App(props) {
         />
         <Routes>
           <Route exact path="/" element={<><Quote/><Home inputRef={inputRef} handleClick={handleClick} /><Recepie search={search} setProgress={setProgress} /></>} />
-          <Route exact path="food/:foodName" element={<FullRecepie title={props.title}/>} />
+          <Route exact path="food/:foodName" element={<FullRecepie setProgress={setProgress}/>} />
         </Routes>
         
       </BrowserRouter>
