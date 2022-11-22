@@ -17,7 +17,7 @@ export default function Recepie(props) {
     let parsedData = await data.json();
     if (parsedData.meals !== null) {
       setrecipies(parsedData.meals)
-      setresults(`Shwoing results for ${props.search}`)
+      setresults(`Showing results for ${props.search}`)
       
     }
     else{
