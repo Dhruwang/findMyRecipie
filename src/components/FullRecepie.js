@@ -50,7 +50,7 @@ export default function FullRecepie(props) {
         <i class="bi bi-tag fs-5 text-secondary my-2"></i><span className='mx-2 text-secondary'>{recipie["strTags"]}</span>
         <div className=''>
         
-          <img src={recipie['strMealThumb']} className='my-4' alt="Food name" style={{ height: "30rem", width: "40rem" }} />
+          <img src={recipie['strMealThumb']} className='my-4 img-fluid' alt="Food name" style={{ height: "30rem", width: "40rem" }} />
           {/* <div>
             <p className='mx-2 fs-4'><span className='fw-bolder'>Category :</span> {recipie['strCategory']}</p>
             <div className='d-flex'>
@@ -67,7 +67,7 @@ export default function FullRecepie(props) {
           </div>
           <div className='instructions my-4'>
             <h2>Instructions</h2>
-            <ol className='text-dark'>{instructions.map(item => <li>{item}</li>)}</ol>
+            <ul className='text-dark'>{instructions.map(item => <li>{item}</li>)}</ul>
           </div>
         </div>
       </div>

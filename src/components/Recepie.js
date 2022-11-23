@@ -41,7 +41,7 @@ export default function Recepie(props) {
           {console.log(recipies)}
           {recipies !== null && recipies.map((element, index) => {
 
-            return <div className='col-md-4 py-4' key={index} >
+            return <div className='col-lg-4 col-md-6 py-4' key={index} >
               < RecepieItem key={element.idMeal} setFoodName={props.setFoodName} title={element.strMeal} imageUrl={element.strMealThumb === null ? 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png' : element.strMealThumb} />
             </div>
           })}
