@@ -39,3 +39,9 @@ body {
     transform: rotate(360deg);
   }
 }
+.card{
+  transition: all 0.2s ease-in-out;
+}
+.card:hover{
+  transform: scale(1.1);
+}

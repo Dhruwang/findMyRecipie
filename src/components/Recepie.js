@@ -4,7 +4,7 @@ import RecepieItem from './RecepieItem'
 
 export default function Recepie(props) {
   const [recipies, setrecipies] = useState([])
-  const [results, setresults] = useState("")
+  const [results, setresults] = useState("all")
   console.log('rerendering')
 
   const fetchRecipies = async () => {
@@ -34,7 +34,7 @@ export default function Recepie(props) {
     fetchRecipies();
   },[props.search])
   return (
-    <div className='container my-4 row mx-auto text-center'>
+    <div className='container my-4 row mx-auto text-center' id='recipe'>
       <h2>{results}</h2>
       <div className='container text-center'>
         <div className='row'>
