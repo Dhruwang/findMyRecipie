@@ -45,3 +45,16 @@ body {
 .card:hover{
   transform: scale(1.1);
 }
+.quotes{
+  width: 75vw;
+}
+.card-img-top{
+  height: 15rem;
+  width: 20rem;
+}
+@media only screen and (max-width: 400px) {
+  .card-img-top{
+    height: 10rem;
+    width: 15rem;
+  }
+}

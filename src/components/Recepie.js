@@ -37,11 +37,11 @@ export default function Recepie(props) {
     <div className='container my-4 row mx-auto text-center' id='recipe'>
       <h2>{results}</h2>
       <div className='container text-center'>
-        <div className='row'>
+        <div className=' container row justify-content-between'>
           {console.log(recipies)}
           {recipies !== null && recipies.map((element, index) => {
 
-            return <div className='col-lg-4 col-md-6 py-4' key={index} >
+            return <div className='col-lg-3 col-md-5 py-4 mx-2' key={index} >
               < RecepieItem key={element.idMeal} setFoodName={props.setFoodName} title={element.strMeal} imageUrl={element.strMealThumb === null ? 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png' : element.strMealThumb} />
             </div>
           })}
