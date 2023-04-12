@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -30,6 +31,13 @@ body {
 .App-link {
   color: #61dafb;
 }
+.recipeContainer{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 4rem;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -49,12 +57,11 @@ body {
   width: 75vw;
 }
 .card-img-top{
-  height: 15rem;
-  width: 20rem;
+  height: 100%;
+  width: 100%;
 }
-@media only screen and (max-width: 400px) {
-  .card-img-top{
-    height: 10rem;
-    width: 15rem;
+@media only screen and (max-width: 470px) {
+  .recipeContainer{
+    padding: 0;
   }
 }
