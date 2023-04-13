@@ -2,7 +2,7 @@
 - FindMyRecipe is a web application built using React which fetches data from MealDB api and shows recipes accordingly.
 - User can search for recipes with specific ingredient using search bar.
 - Fully Responsive
-- Site live at : https://findmyrecipebyjd.netlify.app/
+- Site live at :  https://findmyrecipebyjd.netlify.app/
 
 Mockups:
 ![mockup2](https://user-images.githubusercontent.com/67850763/208105815-81979352-f37b-4b07-a4af-6fe3de36c7c6.jpg)
